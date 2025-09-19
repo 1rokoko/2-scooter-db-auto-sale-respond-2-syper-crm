@@ -1,0 +1,8 @@
+.env
+install.log
+node_modules/
+vendor/
+wordpress/uploads/
+scripts/system_healthcheck.sh
+.DS_Store
+*.log
