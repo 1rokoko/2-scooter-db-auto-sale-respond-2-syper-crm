@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "name": "motorcycle-marketplace",
+  "builds": [
+    {
+      "src": "webhook/src/index-vercel.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/webhook/src/index-vercel.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/webhook/src/index-vercel.js"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "webhook/src/index-vercel.js": {
+      "maxDuration": 30
+    }
+  }
+}

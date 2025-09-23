@@ -1,0 +1,27 @@
+# Common search patterns for ripgrep
+
+# Find API endpoints
+router\.(get|post|put|delete|patch)
+
+# Find database queries
+(SELECT|INSERT|UPDATE|DELETE).*FROM
+
+# Find OpenAI integrations
+openai|generateResponse
+
+# Find TODO/FIXME comments
+(TODO|FIXME|XXX|HACK)
+
+# Find environment variables
+process\.env\.|getenv
+
+# Find error handling
+catch|throw|Error
+
+# Find logging
+logger\.|console\.(log|error|warn)
+
+# Find configuration
+config\.|\.env
+
+# Usage: rg -f docs/index/search-patterns.txt

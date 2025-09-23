@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+webhook/node_modules/
+
+# Docker files
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# Development files
+.env
+.env.local
+.env.development
+
+# Database files
+mysql/
+
+# WordPress files (not needed for API deployment)
+wordpress/
+
+# Documentation
+docs/
+README.md
+
+# Scripts
+scripts/
+install.sh
+stop.sh
+restart.sh
+
+# Tests (keep webhook tests)
+tests/
+!webhook/tests/
+
+# Logs
+*.log
+logs/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore

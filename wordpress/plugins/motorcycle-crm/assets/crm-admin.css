@@ -1,0 +1,416 @@
+/* Motorcycle CRM Admin Styles */
+
+.crm-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.crm-widget {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.crm-widget h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #23282d;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 8px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border-left: 4px solid #0073aa;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #0073aa;
+    line-height: 1;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.deal-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deal-item:last-child {
+    border-bottom: none;
+}
+
+.deal-stage {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.deal-stage-research {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.deal-stage-negotiation {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.deal-stage-invoice {
+    background: #e8f5e8;
+    color: #388e3c;
+}
+
+.deal-stage-won {
+    background: #e8f5e8;
+    color: #2e7d32;
+}
+
+.deal-stage-lost {
+    background: #ffebee;
+    color: #d32f2f;
+}
+
+.quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quick-actions .button {
+    justify-self: stretch;
+}
+
+.deals-controls {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.deals-controls select {
+    padding: 6px 8px;
+}
+
+#deals-table-container {
+    margin-top: 20px;
+}
+
+#deals-table-container .wp-list-table {
+    border: 1px solid #ccd0d4;
+}
+
+#deals-table-container .wp-list-table th {
+    background: #f1f1f1;
+    font-weight: 600;
+}
+
+#deals-table-container .wp-list-table td {
+    vertical-align: middle;
+}
+
+.button-small {
+    padding: 4px 8px;
+    font-size: 11px;
+    line-height: 1.4;
+    height: auto;
+}
+
+.reminders-controls {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.analytics-widget {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    min-height: 300px;
+}
+
+.analytics-widget h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #23282d;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 8px;
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Error states */
+.error {
+    color: #d63638;
+    background: #fcf0f1;
+    border: 1px solid #d63638;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* Success states */
+.success {
+    color: #00a32a;
+    background: #f0f6fc;
+    border: 1px solid #00a32a;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* Dashboard widget styles */
+#crm-widget-content ul {
+    margin: 0;
+    padding: 0;
+}
+
+#crm-widget-content li {
+    list-style: none;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#crm-widget-content li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .crm-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .deals-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .quick-actions {
+        flex-direction: column;
+    }
+    
+    .analytics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Custom scrollbar for tables */
+#deals-table-container {
+    overflow-x: auto;
+}
+
+#deals-table-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+#deals-table-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#deals-table-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+#deals-table-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Notification styles */
+.crm-notification {
+    position: fixed;
+    top: 32px;
+    right: 20px;
+    background: #fff;
+    border-left: 4px solid #0073aa;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    padding: 15px 20px;
+    z-index: 9999;
+    max-width: 300px;
+    border-radius: 0 4px 4px 0;
+}
+
+.crm-notification.success {
+    border-left-color: #00a32a;
+}
+
+.crm-notification.error {
+    border-left-color: #d63638;
+}
+
+.crm-notification.warning {
+    border-left-color: #dba617;
+}
+
+/* Action buttons */
+.action-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.action-buttons .button {
+    padding: 4px 8px;
+    font-size: 11px;
+    line-height: 1.4;
+    height: auto;
+}
+
+/* Status indicators */
+.status-indicator {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status-indicator.active {
+    background: #00a32a;
+}
+
+.status-indicator.pending {
+    background: #dba617;
+}
+
+.status-indicator.inactive {
+    background: #d63638;
+}
+
+/* Filters */
+.crm-filters {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.crm-filters label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: 600;
+}
+
+.crm-filters select,
+.crm-filters input {
+    margin-right: 15px;
+}
+
+/* Pagination */
+.crm-pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.crm-pagination .button {
+    margin: 0 2px;
+}
+
+.crm-pagination .current {
+    background: #0073aa;
+    color: #fff;
+}
+
+/* Charts placeholder */
+.chart-placeholder {
+    background: #f9f9f9;
+    border: 2px dashed #ddd;
+    border-radius: 4px;
+    padding: 40px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* Tooltips */
+.crm-tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.crm-tooltip:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+.crm-tooltip:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    z-index: 1000;
+}

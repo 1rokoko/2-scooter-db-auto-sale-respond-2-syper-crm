@@ -1,0 +1,42 @@
+{
+  "name": "motorcycle-marketplace",
+  "version": "1.0.0",
+  "description": "AI-powered motorcycle marketplace with CRM and automated responses",
+  "main": "webhook/src/index-vercel.js",
+  "type": "module",
+  "scripts": {
+    "start": "node webhook/src/index-vercel.js",
+    "dev": "node webhook/src/index-standalone.js",
+    "test": "cd webhook && npm test",
+    "build": "echo 'No build step required'",
+    "vercel-build": "cd webhook && npm install"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "express-validator": "^7.0.1",
+    "openai": "^4.20.1",
+    "mysql2": "^3.6.5",
+    "pino": "^8.16.2",
+    "pino-pretty": "^10.2.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "motorcycle",
+    "marketplace",
+    "ai",
+    "crm",
+    "whatsapp",
+    "telegram",
+    "vercel"
+  ],
+  "author": "Motorcycle Marketplace Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1rokoko/2-scooter-db-auto-sale-respond-2-syper-crm"
+  }
+}
