@@ -257,13 +257,35 @@ app.get('/metrics', (req, res) => {
   res.json(metrics);
 });
 
+// Welcome page for nano-crm
+app.get('/', (req, res) => {
+  res.json({
+    name: 'Nano CRM',
+    description: 'AI-powered motorcycle marketplace with CRM and automated responses',
+    version: '1.0.0',
+    status: 'operational',
+    endpoints: {
+      health: '/healthz',
+      metrics: '/metrics',
+      variants: '/webhook/variants',
+      deals: '/webhook/deals/hot',
+      analytics: '/webhook/analytics',
+      whatsapp: '/webhook/whatsapp',
+      telegram: '/webhook/telegram'
+    },
+    documentation: 'https://github.com/1rokoko/2-scooter-db-auto-sale-respond-2-syper-crm',
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Health check
 app.get('/healthz', (req, res) => {
   res.json({
     status: 'ok',
     timestamp: new Date().toISOString(),
     version: '1.0.0',
-    environment: 'vercel'
+    environment: 'vercel',
+    service: 'nano-crm'
   });
 });
 

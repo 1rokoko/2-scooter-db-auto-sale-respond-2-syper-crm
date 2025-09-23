@@ -1,7 +1,7 @@
 {
-  "name": "motorcycle-marketplace",
+  "name": "nano-crm",
   "version": "1.0.0",
-  "description": "AI-powered motorcycle marketplace with CRM and automated responses",
+  "description": "Nano CRM - AI-powered motorcycle marketplace with CRM and automated responses",
   "main": "webhook/src/index-vercel.js",
   "type": "module",
   "scripts": {

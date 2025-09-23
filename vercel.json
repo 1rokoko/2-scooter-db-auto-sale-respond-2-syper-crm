@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "motorcycle-marketplace",
+  "name": "nano-crm",
   "builds": [
     {
       "src": "webhook/src/index-vercel.js",
